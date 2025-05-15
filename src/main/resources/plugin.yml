@@ -1,0 +1,16 @@
+name: NickName
+version: '1.0'
+main: ceres.nn.NickName
+api-version: '1.20'
+prefix: NickName
+load: STARTUP
+authors: [ Ceres ]
+description: Los jugadores puede cambiar su nombre
+folia-supported: true
+commands:
+  nickname:
+    aliases: [nn]
+    permission: nickname.command.self
+  othernickname:
+    aliases: [ onn ]
+    permission: nickname.command.other

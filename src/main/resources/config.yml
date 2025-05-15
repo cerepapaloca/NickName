@@ -1,0 +1,20 @@
+prefix: [PREFIX]
+
+messages:
+  command-self:
+    have-no-permission: No tienes permisos
+    missing-args: Tienes que poner nombre que te quieres cambiar
+    banned-nick: Ese nombre esta prohibido
+    successful: Tu nombre fue cambiado
+    is-console: Solo Jugadores
+
+  command-other:
+    success: El nombre del jugador fue cambiado
+    missing-args: Tiene que poner el nombre del jugador
+    missing-nick-name: Tiene que poner el nombre que quieres cambiar
+
+
+ban-nickname:
+  - YO
+player-data:
+  cerespapaloca: Cerepapaloca
