@@ -7,6 +7,8 @@ messages:
     banned-nick: Ese nombre esta prohibido
     successful: Tu nombre fue cambiado
     is-console: Solo Jugadores
+  command-reset:
+    success: Tu nombre se a reiniciado
 
   command-other:
     success: El nombre del jugador fue cambiado

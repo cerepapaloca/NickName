@@ -26,12 +26,14 @@ public final class NickName extends JavaPlugin implements Listener {
         this.getServer().getPluginManager().registerEvents(this, this);
         this.getCommand("nickname").setExecutor(new NickNameCommand());
         this.getCommand("othernickname").setExecutor(new OtherNickNameCommand());
+        this.getCommand("resetnickname").setExecutor(new RestartNickName());
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
     }
+
 
     @Override
     public void reloadConfig() {
