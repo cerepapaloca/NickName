@@ -1,5 +1,5 @@
 name: NickName
-version: '1.1'
+version: '1.2'
 main: ceres.nn.NickName
 api-version: '1.20'
 prefix: NickName

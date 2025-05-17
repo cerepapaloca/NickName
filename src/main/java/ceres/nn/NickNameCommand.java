@@ -1,6 +1,9 @@
 package ceres.nn;
 
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.TextComponent;
 import net.kyori.adventure.text.minimessage.MiniMessage;
+import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -29,7 +32,12 @@ public class NickNameCommand implements CommandExecutor {
                 if (NickName.banNickName.contains(nickName.toLowerCase())) {
                     NickName.sendMessage(sender, "command-self.banned-nick");
                 }else {
-                    player.displayName(MiniMessage.miniMessage().deserialize(convertToMiniMessageFormat(nickName)));
+                    Component component = MiniMessage.miniMessage().deserialize(convertToMiniMessageFormat(nickName));
+                    if (PlainTextComponentSerializer.plainText().serialize(component).length() > 16) {
+                        NickName.sendMessage(sender, "command-self.max-length");
+                        return false;
+                    }
+                    player.displayName(component);
                     NickName.instance.getConfig().set("player-data." + player.getName(), nickName);
                     Bukkit.getAsyncScheduler().runNow(NickName.instance, scheduledTask -> {
                         NickName.instance.saveConfig();

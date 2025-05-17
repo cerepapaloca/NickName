@@ -7,6 +7,7 @@ messages:
     banned-nick: Ese nombre esta prohibido
     successful: Tu nombre fue cambiado
     is-console: Solo Jugadores
+    max-length: El nombre es muy largo
   command-reset:
     success: Tu nombre se a reiniciado
 
